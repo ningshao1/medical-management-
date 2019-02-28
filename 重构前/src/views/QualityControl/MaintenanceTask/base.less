@@ -1,0 +1,98 @@
+.flex-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+//一级保养模板详情
+.OnetplDetails{
+    .basicsInfo{
+        .ivu-input:disabled{
+            background: #fafafa!important;
+        }
+    }
+    #elementInfo{
+        .r_content{
+            background: transparent;
+        }
+        .categoryScroll+a{
+            display: none;
+        }
+        .categoryScroll{
+            >ul{
+                >li{
+                    span:nth-of-type(2){
+                        display: none;
+                    }
+                }
+            }
+        }
+        
+    }
+}
+//
+.Maintenance-template-list{
+    .kld-box-effect{
+        .ivu-row-flex{
+            
+            align-items: center;
+        }
+       
+        [class^=kld-btn]{
+            width: 72px;
+            height: 38px;
+        }
+    }
+
+}
+
+//添加二级模板
+#addTwoTpl,#addOneTemplate{
+    .r_content{
+        background-color: #fafafa;
+    }
+}
+//二级模板详情
+.TwotplDetails{
+    //.basicsInfo{
+    //    .ivu-input:disabled{
+    //        background: #fff!important;
+    //    }
+    //}
+    #elementInfo{
+        .r_content{
+            background: transparent;
+        }
+        .categoryScroll+a{
+            display: none;
+        }
+        
+    }
+}
+//添加二级保养任务
+.addTwoTask{
+    .bisInfo{
+        padding:0!important;
+    }
+    .addSection{
+        .ivu-input{
+            height: 45px;
+        }
+        .ivu-input:disabled{
+            background: #fff!important;
+        }
+    }
+}
+.section-tree {
+    .ivu-poptip-body {
+        max-height: 300px;
+        overflow: auto;
+    }
+}
+.ivu-input,input,.ivu-input:disabled,.ivu-select-selection{
+    border-color: rgba(2,31,57,.1);
+}
+.ivu-input:focus,.ivu-input:hover,.ivu-select-selection-focused, .ivu-select-selection:hover{
+    border-color: #57a3f3;
+}

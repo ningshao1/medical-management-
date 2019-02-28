@@ -1,0 +1,9 @@
+@import "~@/styles/var";
+@import "~element-ui/packages/theme-chalk/src/date-picker";
+@include b(date-editor) {
+
+    &.el-input,
+    &.el-input__inner {
+        width: 100%;
+    }
+}

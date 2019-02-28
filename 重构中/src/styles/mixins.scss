@@ -1,0 +1,9 @@
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+
+@mixin form-item-error() {
+    @include b(form-item) {
+        @include when(error) {
+            @content;
+        }
+    }
+}

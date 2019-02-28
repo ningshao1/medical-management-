@@ -1,0 +1,160 @@
+@import "./var";
+@import "~element-ui/packages/theme-chalk/src/base.scss";
+@import "./utils";
+// @import '@/assets/kld-icon/store/iconfont.css';
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    font-size: $font-size-base;
+    line-height: $line-height-base;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+body {
+    background-color: $body-background-color;
+}
+
+#app {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+}
+
+@keyframes sk-cubeGridScaleDelay {
+
+    0%,
+    70%,
+    100% {
+        transform: scale3D(1.15, 1.15, 1.15);
+    }
+
+    35% {
+        transform: scale3D(0, 0, 1.15);
+    }
+}
+
+
+
+.kld-loading {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .03);
+}
+
+.sk-cube-grid {
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+    margin: auto;
+    outline: none !important;
+    box-sizing: border-box;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+
+    .sk-cube {
+        width: 33.35%;
+        height: 33.35%;
+        background-color: #6b8ee9;
+        box-sizing: border-box;
+        outline: none !important;
+        float: left;
+        animation: sk-cubeGridScaleDelay 1.5s infinite ease-in-out;
+    }
+
+    $i:9;
+
+    @while $i>=1 {
+        .sk-cube#{$i} {
+            @if $i<=3 {
+                animation-delay: ($i/10+0.1s);
+            }
+
+            @else if $i<=6 {
+                animation-delay: ($i/10-0.3s);
+            }
+
+            @else if $i==7 {
+                animation-delay: 0s;
+            }
+
+            @else if $i==8 {
+                animation-delay: 0.2s;
+            }
+
+            @else if $i==9 {
+                animation-delay: 0.3s;
+            }
+        }
+
+        $i: $i - 1;
+    }
+}
+
+@keyframes progress-bar {
+    0% {
+        width: 0%;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.load-progress {
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
+
+    >div {
+        height: 4px;
+        width: 100%;
+        animation: progress-bar 0.7s infinite ease-in-out;
+        background: linear-gradient(to right, #3e73ff, #3ab0ff);
+    }
+}
+
+a {
+    color: $color-link;
+    text-decoration: none;
+
+    &:hover {
+        color: lighten($color-link, 10);
+    }
+
+    &:active {
+        color: darken($color-link, 10);
+    }
+}
+
+.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate3d(-50%, -50%, 0)
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}

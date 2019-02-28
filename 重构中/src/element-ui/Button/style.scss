@@ -1,0 +1,161 @@
+@import "~@/styles/var";
+@import "~element-ui/packages/theme-chalk/src/button";
+
+@mixin button-size($button-width, $button-height) {
+    width: $button-width;
+    height: $button-height;
+}
+
+@mixin button-variant ($color, $background-color, $border-color) {
+    color: $color;
+    background-color: $background-color;
+    border-color: $border-color;
+
+    &:hover {
+        //   background: mix($--color-white, $background-color, $--button-hover-tint-percent);
+        background: mix(rgba(0, 0, 0, 0.88), $background-color, 20%);
+        border-color: $border-color;
+        color: $color;
+    }
+
+    &:focus {
+        color: $color;
+        background-color: $background-color;
+        border-color: $border-color;
+    }
+
+    &:active {
+        background: mix(rgba(0, 0, 0, 0.88), $background-color, 20%);
+        border-color: $border-color;
+        color: $color;
+        outline: none;
+    }
+
+    &::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        pointer-events: none;
+        background-image: radial-gradient(circle, #fff 30%, transparent 10.01%);
+        background-repeat: no-repeat;
+        background-position: 11%;
+        transform: scale(10, 10);
+        opacity: 0;
+        transition: transform 1s, opacity 1.5s;
+    }
+
+    &:active:after {
+        transform: scale(0, 0);
+        opacity: 0.6;
+        transition: 0s;
+    }
+
+    &.is-disabled {
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.45);
+        border-color: transparent;
+
+        &::after {
+            display: none;
+        }
+
+        &,
+        &:hover,
+        &:focus,
+        &:active {
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.45);
+            border-color: transparent;
+        }
+    }
+
+    &.is-plain {
+        @include button-plain($background-color);
+    }
+
+}
+
+@include b(button) {
+    box-sizing: border-box;
+    width: 100px;
+    height: 32px;
+    text-align: center;
+    padding: 0 5px;
+    background: $color-primary;
+    position: relative;
+    overflow: hidden;
+
+    //size 设置 
+    @include m(mini) {
+        @include button-size($button-width-mini, $button-height-mini);
+    }
+
+    @include m(small) {
+        @include button-size($button-width-small, $button-height-small);
+    }
+
+    @include m(large) {
+        @include button-size($button-width-large, $button-height-large);
+    }
+
+    @include m(suit) {
+        //自适用宽度
+        padding: 10px 10px;
+        width: auto;
+        height: auto;
+    }
+
+    //type 设置 
+    @include m(primary) {
+        @include button-variant($--button-primary-color, $--button-primary-fill, $--button-primary-border);
+    }
+
+    @include m(second) {
+        @include button-variant($--button-second-color, $--button-second-fill, $--button-second-border);
+
+        &:hover {
+            background: rgba(75, 116, 224, 0.2);
+        }
+    }
+
+    @include m(weaken) {
+        @include button-variant($--button-weaken-color, $--button-weaken-fill, $--button-weaken-border);
+    }
+
+    @include m(default) {
+        @include button-variant($--button-default-color, $--button-default-fill, $--button-default-border);
+    }
+
+    @include m(success) {
+        @include button-variant($--button-success-color, $--button-success-fill, $--button-success-border);
+    }
+
+    @include m(info) {
+        @include button-variant($--button-info-color, $--button-info-fill, $--button-info-border);
+    }
+
+    @include m(warning) {
+        @include button-variant($--button-warning-color, $--button-warning-fill, $--button-warning-border);
+    }
+
+    @include m(danger) {
+        @include button-variant($--button-danger-color, $--button-danger-fill, $--button-danger-border);
+    }
+
+    @include m(screen) {
+        @include button-variant($--button-screen-color, $--button-screen-fill, $--button-screen-border);
+    }
+
+    @include m(icon) {
+        text-align: center;
+        line-height: 32px;
+        width: 32px;
+        height: 32px;
+        @include button-variant(rgba(0, 0, 0, 0.65), #fcfcfc, rgba(0, 0, 0, 0.18));
+    }
+
+}

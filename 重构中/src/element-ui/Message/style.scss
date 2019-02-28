@@ -1,0 +1,9 @@
+$--border-color-lighter:#90d7ff;
+@import '@/styles/var.scss';
+@import "~element-ui/packages/theme-chalk/src/message";
+.el-message{
+    min-height: 38px;
+    .el-message__content{
+        color:rgba(0, 0, 0, 0.65);
+    }
+}

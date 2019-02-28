@@ -1,0 +1,23 @@
+$padding: 20px;
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+
+    li {
+        padding-left: 20px;
+        width: 100%;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.65);
+        height: 56px;
+        line-height: 56px;
+        cursor: pointer;
+
+        &.active {
+            background-color: #f8f8f8;
+            border-right: 2px solid $color-primary;
+        }
+    }
+}

@@ -1,0 +1,1 @@
+export { default } from "./asset-maintenance-record.vue";

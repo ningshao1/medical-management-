@@ -1,0 +1,12 @@
+@import "~@/styles/var";
+@import "~element-ui/packages/theme-chalk/src/pagination";
+@include b(pagination) {
+    font-weight: normal;
+}
+@include b(pager) {
+    li{
+        &.active {
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,33 @@
+@import "~@/styles/var";
+@import "~element-ui/packages/theme-chalk/src/mixins/mixins";
+@import "~element-ui/packages/theme-chalk/src/form-item";
+
+@include b(form-item) {
+
+    @include e(label) {
+        line-height: $form-control-height-base;
+    }
+    @include e(content) {
+        line-height: $form-control-height-base;
+        .el-input-group {
+            vertical-align: baseline;
+        }
+    }
+
+    @include when(required) {
+        @include pseudo('not(.is-no-asterisk)') {
+            &>.el-form-item__label{
+                &::before{
+                    all: unset;
+                }
+
+                &::after{
+                    content: '*';
+                    display: inline;
+                    color: $color-error;
+                    padding-left: 4px;
+                }
+            }
+        }
+    }
+}

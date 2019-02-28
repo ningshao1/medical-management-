@@ -1,0 +1,32 @@
+@import './error';
+@import './warning';
+@import './success';
+@import './info';
+
+.swal-icon {
+    width: 80px;
+    height: 80px;
+    border-width: 4px;
+    border-style: solid;
+    border-radius: 50%;
+    padding: 0;
+    position: relative;
+    box-sizing: content-box;
+    margin: 10px auto 30px;
+    //&:first-child {
+    //    margin-top: 32px;
+    //}
+
+    &--custom {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        border: none;
+        border-radius: 0;
+    }
+
+    & img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+}

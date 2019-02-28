@@ -1,0 +1,167 @@
+.two_title {
+  background: #fff;
+  padding-top: 20px;
+}
+.two_title .title_content {
+  padding: 0 40px;
+}
+.two_title .title_content > div {
+  line-height: 60px;
+  font-size: 20px;
+  font-weight: normal;
+  font-stretch: normal;
+  letter-spacing: 0px;
+  color: #000000;
+  border-bottom: 1px solid #ccc;
+}
+.four_content {
+  padding: 0 45px;
+  padding-top: 20PX;
+}
+.four_content .c_title {
+  color: #000000;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40px;
+}
+.four_content .c_box {
+  display: flex;
+  flex-direction: row;
+}
+.four_content .c_box .four_left {
+  width: 60%;
+  box-sizing: content-box;
+  padding-right: 10px;
+}
+.four_content .c_box .four_left .left_content {
+  border: solid 1px rgba(2, 31, 57, 0.2);
+  width: 100%;
+  height: 495px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: auto;
+  padding: 30px;
+}
+.four_content .c_box .four_left .left_content .zd_box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  line-height: 40px;
+  margin: 15px 0;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_left {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 40%;
+  overflow: hidden;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_left .zd_name {
+  width: 110px;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  color: #000;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_left .zd_line {
+  color: #01b0c7;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_center {
+  width: 10%;
+  text-align: center;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  color: #999999;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_right {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_right .zd_line {
+  color: #01b0c7;
+  font-size: 16px;
+  letter-spacing: 3px;
+}
+.four_content .c_box .four_left .left_content .zd_box .zd_right input {
+  width: 115px;
+  height: 41px;
+  background-color: #ffffff;
+  border-radius: 3px;
+  border: solid 1px rgba(2, 31, 57, 0.2);
+  padding-left: 5px;
+}
+.four_content .c_box .four_right {
+  width: 40%;
+  box-sizing: content-box;
+  padding-left: 10px;
+}
+.four_content .c_box .four_right .c_title {
+  color: #000000;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 40px;
+}
+.four_content .c_box .four_right .right_content {
+  border: solid 1px rgba(2, 31, 57, 0.2);
+  width: 100%;
+  height: 495px;
+  background-color: #ffffff;
+  border-radius: 2px;
+  overflow: auto;
+  padding: 30px;
+}
+.four_content .c_box .four_right .right_content ol {
+  overflow: auto;
+}
+.four_content .c_box .four_right .right_content ol li {
+  color: #000000;
+  font-size: 14px;
+  line-height: 40px;
+}
+.one_next,
+.one_prv {
+  width: 177px;
+  height: 60px;
+  background-color: #22a1b9;
+  box-shadow: 0px 3px 7px 0px rgba(2, 31, 57, 0.35);
+  border-radius: 3px;
+  border: solid 1px #0c8399;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  line-height: 60px;
+  color: #ffffff;
+  position: absolute;
+  bottom: -80px;
+  right: 0;
+  cursor: pointer;
+}
+.one_next span:nth-of-type(1),
+.one_prv span:nth-of-type(1) {
+  letter-spacing: 5px;
+  margin-left: 20px;
+}
+.one_next .one_right,
+.one_prv .one_right {
+  margin-left: 50px;
+}
+.one_prv {
+  left: 0;
+  background-color: #fff;
+  color: #0c8399;
+}

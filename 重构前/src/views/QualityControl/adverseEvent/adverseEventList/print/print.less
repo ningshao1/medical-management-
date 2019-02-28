@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: #000;
+  line-height: 1;
+}
+.print-chrome {
+  width: 1000px;
+  /*height: 1462px; !*chrome*!*/
+  height: 1459px;
+  /*chrome*/
+  margin: auto;
+  position: relative;
+}
+/* 返回按钮 */
+.print-chrome .goBack {
+  height: auto;
+  position: absolute;
+  right: 0;
+  top: -54px;
+  width: 80px;
+}
+.print-IE {
+  width: 1000px;
+  /*IE firefox*/
+  height: 1528px;
+}
+.print-firefox {
+  width: 1000px;
+  height: 1343px;
+  margin: auto;
+}
+.print-wrap {
+  font-family: '宋体', '830559ca6f1aff00bed51e2d0030001', '宋体';
+  font-size: 16px;
+}
+.print-title {
+  font-size: 26px;
+  line-height: 50px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+.print-firefox .print-title {
+  margin-bottom: 20px;
+}
+.print-head {
+  font-size: 0;
+}
+.print-head p {
+  font-size: 16px;
+  width: 50%;
+  line-height: 40px;
+  display: inline-block;
+  vertical-align: top;
+}
+.print-checkbox,
+.print-checkbox-true {
+  position: relative;
+  line-height: 1;
+  display: inline-block;
+}
+.print-checkbox::before,
+.print-checkbox-true::before {
+  width: 12px;
+  height: 12px;
+  margin-right: 10px;
+  border: 1px solid;
+  display: inline-block;
+  vertical-align: top;
+  /*vertical-align: middle;*/
+  content: '';
+}
+.print-checkbox-true::before {
+  display: inline-block;
+  font-family: Ionicons;
+  speak: none;
+  font-style: normal;
+  font-weight: 400;
+  font-variant: normal;
+  text-transform: none;
+  text-rendering: auto;
+  line-height: 0.4;
+  -webkit-font-smoothing: antialiased;
+  content: "\f3fd";
+  font-size: 22px;
+  font-weight: 600;
+}
+.print-checkbox::after {
+  content: '';
+  display: block;
+}
+.print-required::before {
+  display: inline;
+  content: '*';
+  color: red;
+}
+.table-wrap {
+  margin-top: 10px;
+  display: flex;
+}
+.table-wrap table {
+  border-collapse: collapse;
+  border: 1px solid;
+  text-align: left;
+  display: inline-table;
+}
+.table-wrap table td,
+.table-wrap table th {
+  border: 1px solid;
+  padding: 8px;
+}
+.table-wrap table th {
+  background-color: #eee;
+  height: 40px;
+  font-size: 20px;
+}
+.table-wrap table td {
+  height: 30px;
+}
+.table-l {
+  width: 500px;
+  margin-right: 20px;
+}
+.table-r {
+  width: 480px;
+}
+.event-result .print-required {
+  margin-bottom: 10px;
+}
+.event-result .print-checkbox {
+  margin-bottom: 6px;
+}
+.event-result .print-checkbox:last-of-type {
+  margin-bottom: 0;
+}
+.print-footer {
+  margin-top: 80px;
+  font-size: 20px;
+}
+.print-firefox .print-footer {
+  margin-top: 20px;
+}
+.scroll {
+  overflow: auto;
+  word-break: break-all;
+}
+.fill-align {
+  vertical-align: bottom;
+  display: inline-block;
+  max-width: 250px;
+}

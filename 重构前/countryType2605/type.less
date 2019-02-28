@@ -1,0 +1,175 @@
+[v-cloak] {
+    display: none;
+}
+
+body,
+html {
+    background-color: #f3f4f5;
+    line-height: 1.5;
+}
+
+#app {
+    .test-tree-wrap {
+        width: 700px;
+        height: 1100px;
+        margin: 0 auto;
+        padding: 1px; // border:1px solid #333;
+        .ivu-tree {
+            height: 1000px;
+            overflow: auto;
+            padding: 0 20px;
+            .node-wrap {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 80%;
+                font-size: 14px;
+                cursor: pointer;
+                border: 3px;
+                padding: 3px;
+                .icon-wrap {
+                    display: flex;
+                    align-items: center;
+                    .single-icon {
+                        margin-right: 5px;
+                    }
+                    .ios-plus-outline {
+                        font-size: 25px;
+                        &:hover {
+                            color: #c7b603;
+                        }
+                    }
+                    .ios-trash-outline {
+                        font-size: 30px;
+                        &:hover {
+                            color: #c51548;
+                        }
+                    }
+                    .ios-compose-outline {
+                        font-size: 30px;
+                        &:hover {
+                            color: #075aad;
+                        }
+                    }
+                }
+            }
+            .node-active {
+                border-radius: 3px;
+                background-color: #d9e9ef;
+            }
+        }
+    }
+    .test-add-modal-wrap {
+        .add-modal-content {
+            .ivu-form-item {
+                margin-bottom: 24px !important;
+            }
+        }
+    }
+}
+
+.kld-test-poptip-content {
+    p {
+        font-size: 14px;
+        &:hover {
+            color: #075aad
+        }
+    }
+}
+
+@btn-color: #5ba4c8;
+@btn-border-color: #0c8399;
+@btn-bg-color: #22a1b9;
+@border-color: rgba(2, 31, 57, 0.1);
+@table-bg-color: #fafafa;
+@btn-color-default: #a9a8a9;
+@color-success: #22a1b9;
+@color-error: #e7485a;
+@color-warning: #f9b954;
+@color-default: #c0c7da;
+@color-purple: #7ca7d2;
+@text-success: #0c8399;
+[class*=kld-input] {
+    height: 44px;
+    .ivu-input {
+        height: 100%;
+    }
+    .ivu-icon {
+        height: 44px;
+        line-height: 44px;
+    }
+    .ivu-input-group-append {
+        height: 100%;
+    }
+}
+
+[class*=kld-btn] {
+    background-color: @btn-bg-color;
+    border-color: @btn-border-color;
+    height: 44px;
+    color: #fff;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    .ivu-icon {
+        font-size: 16px;
+        &+span {
+            margin-left: 8px;
+        }
+    }
+    &:hover {
+        color: #fff;
+        border-color: lighten(@btn-border-color, 4);
+        background-color: lighten(@btn-bg-color, 4);
+    }
+    &:active {
+        color: #fff;
+        border-color: darken(@btn-border-color, 10);
+        background-color: darken(@btn-bg-color, 10);
+    }
+}
+
+.kld-btn-large {
+    height: 50px;
+}
+
+.kld-btn-small {
+    height: 36px;
+}
+
+;
+.kld-btn-default {
+    border: solid 1px #999999;
+    background-color: @btn-color-default;
+    &:hover {
+        border-color: lighten(@btn-color-default, 10);
+        background-color: lighten(@btn-color-default, 10);
+    }
+    &:active {
+        border-color: darken(@btn-color-default, 10);
+        background-color: darken(@btn-color-default, 10);
+    }
+}
+
+.kld-btn-error {
+    border: solid 1px #c13342;
+    background-color: @color-error;
+    &:hover {
+        border-color: lighten(@color-error, 10);
+        background-color: lighten(@color-error, 10); //box-shadow: 0 0 0 2px opacity(@color-error, 0.2);
+    }
+    &:active {
+        border-color: darken(@color-error, 10);
+        background-color: darken(@color-error, 10);
+    }
+    &:focus {
+        box-shadow: none;
+    }
+}
+
+.ivu-modal-header{
+    cursor: move;
+}
+

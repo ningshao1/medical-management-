@@ -1,0 +1,822 @@
+//弹性布局通用类名
+@import "./src/views/QualityControl/InspectionTasks/base";
+@import "./src/views/QualityControl/home/base";
+@import "./src/views/QualityControl/MaintenanceTask/base.less";
+@import "./src/views/QualityControl/EquipmentMeasurement/EM";
+@import "./src/static/less/kld-style-native.less";
+//@font-face {
+//    font-family: "pingfang";
+//    src: url("https://mdp.kangyitong.cn/static/css/static/fonts/medilink.ttf");
+//}
+@font-face {
+    font-family: "calidray";
+    src: url("./src/static/pingfang.ttf");
+}
+@page {
+    size: auto;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "pingfang", "calidray", "微软雅黑", Arial, sans-serif;
+}
+
+//element checkbox 颜色重置
+.el-checkbox__input.is-checked .el-checkbox__inner,
+.el-checkbox__input.is-indeterminate .el-checkbox__inner {
+    background-color: #9abf9a !important;
+    border-color: #9abf9a !important;
+}
+.ivu-switch-checked {
+    background-color: #9abf9a !important;
+    border-color: #9abf9a !important;
+}
+.flex_r {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.content_right .ivu-table-border th,
+.content_right .ivu-table-cell {
+    font-size: 14px;
+    text-align: center;
+    color: #666666;
+    font-weight: 400;
+}
+.ivu-table-wrapper {
+    border: none;
+}
+.hint {
+    color: #999;
+    font-size: 12px;
+}
+/*通用样式类*/
+.text-ellipsis,
+.textEllipsis,
+.omit {
+    // display: table;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.text-ellipsis.table-ellipsis{
+    display: table;
+}
+.text-space-between{//文字两端分散对其（在火狐浏览器上若不生效，在div上添加属性 lang="zh" 即可）
+    text-align-last:justify;
+    text-align:justify;
+    text-justify:distribute-all-lines; // 这行必加，兼容ie浏览器
+}
+
+/*条纹状表格*/
+.table-stripe {
+    // tbody{
+
+    tr:nth-child(2n) {
+        background-color: #f8f8f9 !important;
+    }
+    tr:nth-child(2n + 1) {
+        background-color: #fafafa !important;
+    }
+    // }
+}
+.i-table-stripe {
+    .ivu-table {
+        background-color: transparent;
+    }
+    tbody {
+        tr:nth-child(2n) {
+            td {
+                background-color: #fafafa !important;
+            }
+        }
+        tr:nth-child(2n + 1) {
+            td {
+                background-color: #f8f8f9 !important;
+            }
+        }
+    }
+}
+/*loading动画*/
+.demo-spin-icon-load {
+    animation: ani-demo-spin 1s linear infinite;
+    color: #9abf9a;
+}
+.demo-spin-icon-load + div {
+    color: #9abf9a;
+}
+@keyframes ani-demo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+.demo-spin-col {
+    height: 100px;
+    position: relative;
+    border: 1px solid #eee;
+    // background-color: #fafafa;
+}
+.ivu-spin-fix {
+    background-color: #fafafa;
+}
+
+/* 滚轮优化*/
+.beScrollHeight {
+    line-height: 43px !important;
+}
+.beScroll {
+    overflow: auto;
+    white-space: nowrap;
+}
+.beScroll::-webkit-scrollbar {
+    /*滚动条整体部分，其中的属性有width,height,background,border等（就和一个块级元素一样）（位置1）*/
+    width: 5px;
+    height: 5px;
+}
+.beScroll::-webkit-scrollbar-track-piece {
+    /*内层轨道，滚动条中间部分（位置4）*/
+    background: transparent;
+}
+.beScroll::-webkit-scrollbar-thumb {
+    /*滚动条里面可以拖动的那部分（位置5）*/
+    background: #ccc;
+    border-radius: 4px;
+}
+//保养模板input
+.temp_input {
+    input {
+        height: 45px;
+    }
+}
+//动态弹窗样式修改
+.kld-confirm {
+    .ivu-modal-footer {
+        border-top: none;
+    }
+}
+/*初始化2弹窗*/
+.ivu-modal-header {
+    cursor: move;
+}
+.two_tan {
+    .ivu-modal-header-inner {
+        font-size: 16px;
+        color: #333333;
+    }
+    .ivu-btn-primary {
+        width: 120px;
+        height: 45px;
+        background-color: #22a1b9;
+        border-radius: 3px;
+        border: solid 1px #0c8399;
+    }
+
+    .ivu-modal-content {
+        width: 540px;
+        background-color: #ffffff;
+        border-radius: 6px;
+        margin: auto;
+        .ivu-modal-body {
+            text-align: center;
+        }
+        .content_t {
+            display: inline-block;
+            .ivu-select-single .ivu-select-selection {
+                height: 50px;
+            }
+            .ivu-select-single .ivu-select-selection .ivu-select-placeholder {
+                height: 50px;
+                line-height: 50px;
+                color: #cccccc;
+                font-size: 14px;
+            }
+            .ivu-select-selected-value {
+                height: 50px;
+                line-height: 50px;
+                font-size: 14px;
+            }
+        }
+    }
+
+    .one_info {
+        background: #fff;
+        text-align: left;
+
+        input {
+            background-color: #ffffff;
+        }
+        .info_h {
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 40px;
+            letter-spacing: 0px;
+            color: #000000;
+        }
+        .info_z {
+            background-color: #ffffff;
+            width: 390px;
+            height: 50px;
+            border-radius: 3px;
+            border: solid 1px rgba(2, 31, 57, 0.2);
+            display: block;
+            line-height: 50px;
+            padding-left: 20px;
+            font-size: 14px;
+            color: #333333;
+        }
+    }
+}
+//初始化3
+.up_content {
+    overflow: auto;
+    .ivu-upload {
+        margin-top: 10px;
+    }
+    .ivu-upload-drag {
+        border: none;
+    }
+}
+
+.tree_tan {
+    .ivu-modal-content {
+        width: 540px;
+        height: 347px;
+    }
+    //初始化3弹窗
+    .content_t {
+        text-align: center;
+        .msg_c {
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: normal;
+            font-stretch: normal;
+            line-height: 30px;
+            color: #333333;
+            word-wrap: break-word;
+        }
+    }
+    .ivu-modal-footer {
+        border: none;
+        text-align: center;
+        .ivu-btn-text,
+        .ivu-btn-primary {
+            width: 120px;
+            height: 45px;
+            background-color: #e3e3e3;
+            border-radius: 3px;
+            border: solid 1px #999999;
+            margin: 0 20px;
+        }
+        .ivu-btn-primary {
+            background-color: #22a1b9;
+        }
+    }
+}
+.four_tan {
+    .ivu-modal-content {
+        width: 540px;
+        height: auto;
+    }
+    .ivu-modal-footer {
+        padding-bottom: 40px;
+    }
+}
+//初始化第六模块弹窗重置样式
+.six_tan {
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    > div {
+        width: auto !important;
+    }
+    .ivu-modal-content {
+        width: 900px;
+        height: auto;
+        //padding:0 30px;
+        // position: fixed;
+        // top:50%;
+        // left: 50%;
+        // transform: translate(-50%,-50%);
+    }
+    .six_box {
+        //padding:0 30px;
+        .six_z {
+            .box_h {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                .h_title {
+                    color: #000000;
+                    font-size: 14px;
+                    line-height: 40px;
+                    display: inline;
+                }
+                input {
+                    width: 392px;
+                    height: 42px;
+                    background-color: #ffffff;
+                    border-radius: 3px;
+                    border: solid 1px rgba(2, 31, 57, 0.2);
+                    padding-left: 10px;
+                    font-size: 12px;
+                    color: #333;
+                }
+                > div:nth-of-type(2) {
+                    display: inline-block;
+                    position: relative;
+                    img {
+                        width: 23px;
+                        position: absolute;
+                        right: 5px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .ks_box {
+        .ks_name {
+            color: #000000;
+            line-height: 40px;
+            font-size: 14px;
+        }
+        .ks_block {
+            background-color: #f5f6fa;
+            border-radius: 3px;
+            border: solid 1px rgba(2, 31, 57, 0.2);
+            line-height: 40px;
+            color: #333333;
+            font-size: 14px;
+            padding-left: 10px;
+        }
+    }
+    .xz_radio {
+        .xz_jiao {
+            color: #000000;
+            line-height: 40px;
+            font-size: 14px;
+        }
+    }
+    .ivu-modal-footer {
+        border: none;
+        .ivu-btn-text,
+        .ivu-btn-primary {
+            width: 120px;
+            height: 45px;
+            background-color: #e3e3e3;
+            border-radius: 3px;
+            border: solid 1px #999999;
+            margin: 0 20px;
+        }
+        .ivu-btn-primary {
+            background-color: #22a1b9;
+        }
+    }
+}
+//表单中心重置
+.singer_center {
+    //重置input的高度
+    height: 195px !important;
+    .ivu-input {
+        height: 45px;
+        font-size: 14px;
+    }
+    .ivu-input-icon {
+        font-size: 20px;
+        line-height: 45px;
+    }
+    .ivu-select-single {
+        .ivu-select-selection {
+            height: 45px;
+            line-height: 45px;
+            .ivu-select-placeholder {
+                height: 45px;
+                line-height: 45px;
+                font-size: 14px;
+            }
+            .ivu-select-selected-value {
+                height: 45px;
+                font-size: 14px;
+                line-height: 45px;
+            }
+        }
+    }
+}
+//标签页
+// .ivu-tabs.ivu-tabs-card>.ivu-tabs-bar .ivu-tabs-nav-container
+.ivu-tabs {
+    margin-top: 20px;
+    &.ivu-tabs-card {
+        .ivu-tabs-bar {
+            margin-bottom: 0;
+            .ivu-tabs-nav-container {
+                height: 44px;
+            }
+
+            .ivu-tabs-tab {
+                width: 125px;
+                height: 47px;
+                background-color: #b5c2ca;
+                border-radius: 3px;
+                line-height: 38px;
+                text-align: center;
+                color: #fff;
+            }
+            .ivu-tabs-tab-active {
+                width: 125px;
+                height: 44px;
+                line-height: 38px;
+                text-align: center;
+                background: rgb(250, 250, 250);
+                color: #22a1b9;
+            }
+        }
+    }
+    .ivu-tabs-bar {
+        margin-bottom: 0;
+        .ivu-tabs-nav-container {
+            //height: 44px;
+        }
+    }
+}
+//新建报单
+.input_ {
+    width: 100%;
+    input {
+        height: 50px;
+        background-color: #ffffff;
+        border-radius: 3px;
+        border: solid 1px rgba(2, 31, 57, 0.2);
+        width: 100%;
+    }
+    .ivu-select-multiple {
+        .ivu-select-selection {
+            min-height: 50px;
+            .ivu-select-placeholder {
+                line-height: 50px;
+                font-size: 14px;
+                height: 50px;
+            }
+        }
+        .ivu-tag {
+            height: 32px;
+            line-height: 32px;
+            margin: 8px 4px 2px 0;
+        }
+    }
+}
+//新建报单弹窗重置
+.singer_tan {
+    .ivu-modal-header {
+        background: #aec5cb;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        .ivu-modal-header-inner {
+            color: #fff;
+        }
+    }
+    .ivu-modal-content {
+        width: 550px;
+        height: auto;
+        background-color: #ffffff;
+        border-radius: 6px;
+    }
+    .content_t {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: auto !important;
+        .msg_c {
+            font-size: 20px;
+            color: #000;
+            display: inline-block;
+        }
+        .msg_d {
+            color: #999999;
+            font-size: 14px;
+            display: inline-block;
+        }
+    }
+    .ivu-modal-footer {
+        text-align: center;
+        // padding-top:30px;
+        border: none;
+    }
+
+    .ivu-modal-footer button + button {
+        display: none;
+    }
+    .ivu-btn-text {
+        width: 120px;
+        height: 45px;
+        background-color: #e3e3e3;
+        border-radius: 3px;
+        border: solid 1px #999999;
+        color: #666666;
+        font-size: 14px;
+    }
+}
+.singer_tan1 {
+    .ivu-modal-content {
+        width: 930px;
+        height: 601px;
+        background-color: #ffffff;
+        border-radius: 3px;
+    }
+    .content_t {
+        height: 480px;
+        .t_left {
+            width: 33%;
+            height: 100%;
+            border: solid 1px rgba(2, 31, 57, 0.2);
+            box-sizing: border-box;
+            padding: 20px;
+            overflow: auto;
+        }
+        .t_right {
+            width: 64%;
+            box-sizing: border-box;
+            height: 100%;
+            padding: 0 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            //border: solid 1px rgba(2, 31, 57, 0.2);
+            .right_bottom {
+                height: 425px;
+                background-color: #ffffff;
+                border-radius: 3px;
+                border: solid 1px #dce0e6;
+                padding: 20px;
+                padding-top: 0;
+                overflow: auto;
+                > div {
+                    color: #666666;
+                    font-size: 14px;
+                    font-weight: bold;
+                    border-bottom: solid 1px #dce0e6;
+                    line-height: 40px;
+                }
+                > ul {
+                    li {
+                        font-size: 14px;
+                        color: #666666;
+                        line-height: 40px;
+                        border-bottom: solid 1px #dce0e6;
+                    }
+                }
+            }
+        }
+        .ivu-input {
+            height: 45px;
+        }
+        .ivu-input-icon {
+            line-height: 45px;
+        }
+    }
+    .ivu-modal-footer {
+        display: none;
+    }
+}
+//报单详情
+.wei_tan {
+    .ivu-modal-content {
+        width: 700px;
+    }
+    .wei_content {
+        padding: 0 30px;
+        .c_block {
+            > div {
+                font-size: 14px;
+                color: #000;
+                line-height: 40px;
+            }
+            > textarea {
+                height: 100px;
+                width: 100%;
+                padding: 10px;
+                color: #333333;
+                font-size: 14px;
+            }
+        }
+    }
+}
+ul {
+    li {
+        list-style: none;
+    }
+}
+.click_li {
+    border-left: solid 1px #01b0c7;
+    background-color: #ffffff !important;
+    p:nth-child(1) {
+        color: #01b0c7;
+    }
+    p:nth-child(2) {
+        border-color: #01b0c7;
+        color: #01b0c7;
+    }
+}
+// 树的字体大小调整
+.ivu-tree-title {
+    font-size: 14px;
+}
+
+//tab标签样式重置
+.ivu-tabs {
+    margin-top: 0;
+}
+.ivu-tabs-bar {
+    border-bottom: none;
+}
+.ivu-tabs.ivu-tabs-card .ivu-tabs-bar .ivu-tabs-nav-container {
+    height: 55px;
+}
+.ivu-tabs.ivu-tabs-card .ivu-tabs-bar .ivu-tabs-tab-active {
+    height: 55px;
+    z-index: 10;
+}
+.ivu-tabs .ivu-tabs-tabpane {
+    background: #fff;
+    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.15);
+}
+.ivu-checkbox-checked .ivu-checkbox-inner {
+    border-color: #9abf9a;
+    background-color: #9abf9a;
+}
+.ivu-checkbox-indeterminate .ivu-checkbox-inner {
+    border-color: #9abf9a;
+    background-color: #9abf9a;
+}
+//重置样式提示为必填字段
+.main-contract .ivu-form-item-error-tip {
+    top: 100% !important;
+}
+//重置系统管理 保单分配的搜索框
+#dec_search .ivu-input {
+    height: 40px;
+}
+#dec_search .ivu-input-icon {
+    height: 40px;
+    line-height: 40px;
+}
+
+.nei_t .ivu-btn-text {
+    display: none;
+}
+
+.t_tan {
+    .ivu-modal-close {
+        top: 3px;
+    }
+    .ivu-modal-header {
+        padding: 8px 16px;
+    }
+    .ivu-modal-content {
+        width: 490px;
+    }
+    .content_t .msg_c {
+        margin-top: 20px;
+    }
+    .ivu-icon-ios-close-empty {
+        color: #fff;
+    }
+    .ivu-modal-header {
+        background-color: #459ca2;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        .ivu-modal-header-inner {
+            color: #fff;
+        }
+    }
+    .ivu-modal-footer {
+        padding-bottom: 22px;
+        .ivu-btn-primary {
+            width: 90px;
+            height: 36px;
+            //line-height: 36px;
+        }
+        .ivu-btn-text {
+            width: 90px;
+            height: 36px;
+        }
+    }
+}
+.addRole_ {
+    .ivu-modal-footer {
+        text-align: center;
+        border-top: 0;
+        .ivu-btn-text {
+            width: 90px;
+            height: 36px;
+            background-color: #e3e3e3;
+            border-radius: 3px;
+            border: 1px solid #999;
+            margin: 0 20px;
+        }
+        .ivu-btn-primary {
+            width: 90px;
+            height: 36px;
+            background-color: #22a1b9;
+            color: #fff;
+        }
+    }
+}
+// input{
+//     border-color:#f4f4f4!important;
+// }
+// .ivu-modal-mask::before{
+//     content: '';
+//     position: absolute;
+//     top: 0; right: 0; bottom: 0; left: 0;
+//     -webkit-filter: blur(20px);
+//     filter: blur(20px);
+// }
+
+//     .ivu-modal-mask:before {
+//         content:'';
+//         position:absolute;
+//         top:0;
+//         right:0;
+//         bottom:0;
+//         left:0;
+//         margin:-30px;
+//         z-index:-1;
+//         -webkit-filter:blur(20px);
+//         filter:blur(20px);
+//         filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius=4, MakeShadow=false);
+//     }
+.ivu-modal-header {
+    background-color: #459ca2 !important;
+    padding: 8px 16px !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+.ivu-btn-primary {
+    background-color: #22a1b9;
+    border-radius: 3px;
+    border: solid 1px #0c8399;
+    width: 75px;
+}
+.ivu-btn-primary:hover {
+    background-color: #22a1b9;
+    border: solid 1px #0c8399;
+}
+.ivu-modal-close {
+    top: 4px !important;
+}
+.ivu-modal-close .ivu-icon-ios-close-empty {
+    color: #ffffff !important;
+}
+.ivu-modal-header p,
+.ivu-modal-header-inner {
+    color: #ffffff !important;
+}
+.vertical-center-modal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .ivu-modal {
+        top: 0;
+    }
+}
+//tab标签页背景颜色
+.ivu-tabs .ivu-tabs-tabpane {
+    background-color: #f3f4f5;
+}
+
+.kld-section-tree {
+    width: 100%;
+    // input {
+    //     cursor: pointer;
+    // }
+    .ivu-poptip-popper {
+        width: 100%;
+    }
+    .ivu-poptip-rel {
+        width: 100%;
+    }
+    .ivu-poptip-body {
+        max-height: 450px;
+        overflow: auto;
+    }
+    .ivu-poptip-body-content {
+        overflow: initial;
+    }
+}
+
+.kld-native-btn {
+    height: 44px;
+    min-width: 75px;
+}

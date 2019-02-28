@@ -1,0 +1,1 @@
+export { default } from './supplies-list.vue'

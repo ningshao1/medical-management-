@@ -1,0 +1,443 @@
+@import "./common/varible";
+.kld-form-item{
+  >.ivu-form-item-label{
+    line-height: 24px;
+  }
+}
+.kld-input{
+  height: 44px;
+  .ivu-input{
+    height: 100%;
+  }
+  >.ivu-icon{
+    height: 100%;
+    line-height: 44px;
+  }
+  .ivu-input-group-prepend,
+  .ivu-input-group-append{
+    height: 100%;
+  }
+}
+
+.kld-select{
+  height: 44px;
+  .ivu-select-selection{
+    height: 100%;
+    .ivu-select-selected-value,
+    .ivu-select-placeholder{
+      line-height: 42px;
+      height: 100%;
+    }
+    .ivu-tag{
+      margin-top: 10px;
+    }
+  }
+}
+
+.ivu-select{
+  >.ivu-select-selection{
+    >div{
+      height: 100%;
+      >.ivu-select-input{
+        height: 100%;
+        cursor: auto;
+      }
+    }
+  }
+}
+[class*=kld-btn]{
+  background-color: @btn-bg-color;
+  border-color: @btn-border-color;
+  height: 44px;
+  color: #fff;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  .ivu-icon{
+    font-size: 16px;
+    &+span{
+      margin-left: 8px;
+    }
+  }
+  &:hover{
+    color: #fff;
+    border-color: lighten(@btn-border-color, 4);
+    background-color: lighten(@btn-bg-color, 4);
+  }
+  &:active{
+    color: #fff;
+    border-color: darken(@btn-border-color, 10);
+    background-color: darken(@btn-bg-color, 10);
+  }
+}
+
+
+
+.kld-btn-large{
+  height: 50px;
+}
+.kld-btn-small{
+  height: 36px;
+}
+.kld-btn-default{
+  border: solid 1px #999999;
+  background-color: @btn-color-default;
+  &:hover{
+    border-color: lighten(@btn-color-default, 10);
+    background-color: lighten(@btn-color-default, 10);
+  }
+  &:active{
+    border-color: darken(@btn-color-default, 10);
+    background-color: darken(@btn-color-default, 10);
+  }
+}
+
+.kld-btn-error{
+  border: solid 1px #c13342;
+  background-color: @color-error;
+  &:hover{
+    border-color: lighten(@color-error, 10);
+    background-color: lighten(@color-error, 10);
+    //box-shadow: 0 0 0 2px opacity(@color-error, 0.2);
+  }
+  &:active{
+    border-color: darken(@color-error, 10);
+    background-color: darken(@color-error, 10);
+  }
+  &:focus{
+    box-shadow: none;
+  }
+}
+
+.kld-date-picker{
+  height: 44px;
+  width: 100%;
+  .ivu-date-picker-rel{
+    height: 100%;
+    .ivu-input-wrapper{
+      height: 100%;
+      .ivu-input,.ivu-icon{
+        height: 100%;
+        line-height: 44px;
+      }
+    }
+  }
+}
+.position-to-title{
+  position: relative;
+  >*:first-of-type{
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+  }
+}
+.kld-box-effect{
+  border-radius: 3px;
+  border: solid 1px rgba(2, 31, 57, 0.1);
+  padding: 20px;
+  background-color: @table-bg-color;
+}
+.kld-form-footer{
+  margin: 30px -30px -30px;
+  padding: 0 30px;
+  height: 80px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  background-color: #e6e6e6;
+}
+
+
+/*当modal显示时，使#app模糊*/
+#app{
+  //transition: filter .1s;
+  min-height: 100vh;
+  will-change: filter;
+  filter: blur(0px);
+  &.blur{
+    filter: blur(2px);
+  }
+}
+
+.show-text-length{
+  position: relative;
+  &:before{
+    content: attr(data-show-text-length);
+    display: block;
+    position: absolute;
+    bottom: 4px;
+    right: 22px;
+    font-size: 14px;
+    color: #a9a8a9;
+    z-index: 2;
+  }
+}
+@keyframes ivuMoveUpIn{
+  0%{
+  
+    transform: translateY(-100%);
+    opacity: 1
+  }
+  100%{
+
+    transform: translateY(0px);
+    opacity: 1
+  }
+}
+.move-up-modal{
+  .ivu-modal{
+    top: 0;
+    &.ease-enter-active{
+      animation: ivuMoveUpIn 0.3s linear;
+    }
+    &.ease-leave-active{
+      animation-name: ivuMoveUpOut;
+    }
+  }
+  .ivu-modal-content{
+    border-radius: 0;
+    background-color: transparent;
+  }
+  .ivu-modal-body{
+    //padding: 0;
+    background-color: #fff;
+  }
+  .ivu-modal-footer{
+    border-top: 0;
+    background-color: #fff;
+    border-radius: 0 0 6px 6px;
+    //&>*:empty{
+    //  display: none;
+    //}
+    .ivu-btn{
+      background-color: #22a1b9;
+    }
+    .ivu-btn-text{
+      width: 75px;
+      color: #fff;
+      background-color: #a9a8a9 ;
+    }
+  }
+}
+
+.kld-box-shadow{
+  //box-shadow: 0 3px 7px rgba(0, 0, 0, 0.15);
+}
+
+.c-table{
+  width: 100%;
+  //overflow: hidden;
+  border-radius: 3px;
+  border: solid 1px rgba(2, 31, 57, 0.1);
+  background-color: #fafafa;
+  .ivu-table{
+    background-color: transparent;
+    font-size: 14px;
+
+    &:before,&:after{
+      display: none;
+    }
+    td{
+      background-color: transparent;
+    }
+
+    .ivu-table-header{
+      background-color: #eaeaea;
+      th{
+        padding-top: 18px;
+        padding-bottom: 18px;
+        background-color: transparent;
+      }
+    }
+    .ivu-table-body,.ivu-table-tip{
+      tr {
+        height: 66px;
+      }
+    }
+    // .ivu-table-header,.ivu-table-body,.ivu-table-tip{
+    //   >table{
+    //     width: 100% !important;
+    //     padding: 0 20px;
+    //   }
+    // }
+  }
+  .c-table-page{
+    padding: 20px 0;
+    text-align: center;
+  }
+}
+
+//火狐下的移除
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+//谷歌下的移除
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+.no-pointer-events{
+  pointer-events: none;
+}
+
+
+
+.relative{
+  position: relative !important;
+}
+
+.kld-success{
+  color: @text-success;
+}
+.kld-error{
+  color: @color-error;
+}
+.kld-warning{
+  color: @color-warning;
+}
+.kld-purple{
+  color: @color-purple;
+}
+.kld-default{
+  color: @btn-color-default
+}
+.kld-orange{
+  color: @color-orange
+}
+.utils-generate(@num, @index: 0) when (@index <= @num) {
+  @value: @index + 0px !important;
+  .m-@{index} {margin: @value}
+  .mx-@{index} {margin-left: @value; margin-right: @value}
+  .my-@{index} {margin-top: @value; margin-bottom: @value}
+  .mt-@{index} {margin-top: @value}
+  .mr-@{index} {margin-right: @value}
+  .mb-@{index} {margin-bottom: @value}
+  .ml-@{index} {margin-left: @value}
+
+  .p-@{index} {padding: @value}
+  .px-@{index} {padding-left: @value; padding-right: @value}
+  .py-@{index} {padding-top: @value; padding-bottom: @value}
+  .pt-@{index} {padding-top: @value}
+  .pr-@{index} {padding-right: @value}
+  .pb-@{index} {padding-bottom: @value}
+  .pl-@{index} {padding-left: @value}
+
+
+  .fz-@{index} {font-size: @value}
+  .w-@{index} {width: @value}
+  .h-@{index} {height: @value}
+  .lh-@{index} {line-height: @value}
+
+  .utils-generate(@num, @index + 1);
+}
+
+.b-0{
+  border: 0 !important;
+}
+.bt-0{
+  border-top: 0 !important;;
+}
+.br-0{
+  border-right: 0 !important;;
+}
+.bb-0{
+  border-bottom: 0 !important;;
+}
+.bl-0{
+  border-left: 0 !important;;
+}
+
+.utils-generate(26);
+
+
+.full-width{
+  width: 100% !important;
+}
+
+.full-height{
+  height: 100% !important;
+}
+.block{
+  display: block !important;
+}
+.inline-block{
+  display: inline-block !important;
+}
+
+.text-center{
+  text-align: center !important;
+}
+
+.text-uppercase{
+  text-transform: uppercase !important;
+}
+.text-no-wrap{
+  white-space: nowrap !important;
+}
+.font-weight-bold{
+  font-weight: bold !important;
+}
+
+
+
+.flex{
+  display: flex !important;
+}
+.inline-flex{
+  display: inline-flex !important;
+}
+
+.flex-row{
+  flex-direction: row !important;
+}
+.flex-row-reverse{
+  flex-direction: row-reverse !important;
+}
+.flex-column{
+  flex-direction: column !important;
+}
+.flex-column-reverse{
+  flex-direction: column-reverse !important;
+}
+.justify-content-start{
+  justify-content: start !important;
+}
+.justify-content-end{
+  justify-content: end !important;
+}
+.justify-content-center{
+  justify-content: center !important;
+}
+.justify-content-between{
+  justify-content: space-between !important;
+}
+.justify-content-around{
+  justify-content: space-around !important;
+}
+
+.align-items-start{
+  align-items: flex-start !important;
+}
+.align-items-end{
+  align-items: flex-end !important;
+}
+.align-items-center{
+  align-items: center !important;
+}
+//.align-items-baseline{
+//  align-self: baseline !important;
+//}
+.align-items-stretch{
+  align-items: stretch !important;
+}
+
+.flex-grow-1{
+  flex-grow: 1 !important;
+}
+.flex-shrink-0{
+  flex-shrink: 0 !important;
+}

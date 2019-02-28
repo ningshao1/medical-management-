@@ -1,0 +1,12 @@
+#container-fluid .ivu-tabs-tabpane {
+  background: #fafafa;
+}
+#container-fluid td {
+  background: #fafafa;
+}
+#container-fluid tr:hover > td {
+  background: #f2f2f2;
+}
+.addDetail .ivu-form-item-error-tip {
+  top: 90%;
+}

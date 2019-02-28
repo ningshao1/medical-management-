@@ -1,0 +1,30 @@
+.bottom-button {
+  position: absolute;
+  bottom: -65px;
+  right: 13px;
+  z-index: 1;
+}
+@keyframes rotateIn {
+  0% {
+    transform: rotateZ(0);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
+}
+@keyframes rotateup {
+  0% {
+    transform: rotateZ(180deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+.rotateup {
+  animation: rotateup 0.5s;
+  animation-fill-mode: forwards;
+}
+.rotateIn {
+  animation: rotateIn 0.5s;
+  animation-fill-mode: forwards;
+}

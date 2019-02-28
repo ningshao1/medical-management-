@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <title>医学装备信息化管理系统-登录 恺立达</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <meta name="keywords" content="设备管理软件,设备管理系统,医疗设备管理系统,卫计委信息化,医学装备管理系统,医院设备管理,恺立达,南京恺立达,江苏恺立达" />
+    <meta name="description" content="恺立达医院管理公司是一家为医疗机构提供全院设备全生命周期管理、托管、维修保修服务的专业性平台公司。公司主营业务包括：整体医疗设备托管服务及其他医疗设备维修保修等服务。获得ISO9001质量管理体系、IOS14001环境管理体系、OHSAS18001职业健康与安全管理体系、ISO13485医疗器械质量管理体系四大国际认证。" />
+    <meta name="robots" content="noindex,nofollow">
+    <link href="https://lib.baomitu.com/iview/3.0.0/styles/iview.css" rel="stylesheet">
+    <link rel="stylesheet" href="./type.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="test-tree-wrap">
+            <div style="width:100%;height:50px;"></div>
+            <i-input v-model="searchData" placeholder="搜索国家分类编码/名称"></i-input>
+            <div class="tree-loading" >
+                <Spin fix v-if='loadingShow'>
+                    <Icon type="ios-loading" size=18 class="demo-spin-icon-load"></Icon>
+                    <div>加载中</div>
+                </Spin>
+                <Tree :data="treeData" :render="currencyRender"></Tree>
+            </div>
+            <Modal v-model="add" :mask-closable="false" title="新增国家分类" class="test-add-modal-wrap">
+                <div class="add-modal-content">
+                    <i-form ref="addInfo" :model="addFrom" :rules="addRules" v-if="isNewAdd">
+                        <Form-Item prop="typeCode" label="分类编码">
+                            <i-input class="kld-input" v-model="addFrom.typeCode" @on-keyup.13="doDetermine"></i-input>
+                        </Form-Item>
+                        <Form-Item prop="typeName" label="分类名称">
+                            <i-input class="kld-input" v-model="addFrom.typeName" @on-keyup.13="doDetermine"></i-input>
+                        </Form-Item>
+                    </i-form>
+                </div>
+                <div slot="footer">
+                    <i-button class="kld-btn-default" @click="doCancel">取消</i-button>
+                    <i-button class="kld-btn" @click="doDetermine">确定</i-button>
+                </div>
+            </Modal>
+            <Modal v-model="config" :mask-closable="false" :title="configTitle[configQuery]" class="test-add-modal-wrap">
+                <div class="add-modal-content">
+                    <i-form ref="CCForm" :model="CCForm" :rules="CCRules" v-if="configQuery==='configCode'">
+                        <Form-Item prop="typeCode" label="分类编码">
+                            <i-input class="kld-input" v-model="CCForm.typeCode" @on-keyup.13="doConfig(configQuery,configDom)"></i-input>
+                        </Form-Item>
+                    </i-form>
+                    <i-form ref="CNForm" :model="CNForm" :rules="CNRules" v-if="configQuery==='configName'">
+                        <Form-Item prop="typeName" label="分类名称">
+                            <i-input class="kld-input" v-model="CNForm.typeName" @on-keyup.13="doConfig(configQuery,configDom)"></i-input>
+                        </Form-Item>
+                    </i-form>
+                </div>
+                <div slot="footer">
+                    <i-button class="kld-btn-default" @click="doCancelConfig">取消</i-button>
+                    <i-button class="kld-btn" @click="doConfig(configQuery,configDom)">确定</i-button>
+                </div>
+            </Modal>
+        </div>
+    </div>
+
+
+    <script src="https://lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://lib.baomitu.com/vue/2.5.17-beta.0/vue.min.js"></script>
+    <script src="https://lib.baomitu.com/iview/3.0.0/iview.min.js"></script>
+    <script src="https://lib.baomitu.com/axios/0.18.0/axios.min.js"></script>
+    <script src="./Address.js"></script>
+    <script src="./plugin/plugins.js"></script>
+    <script src="./axios.js"></script>
+    <script src="./type.js"></script>
+</body>
+
+</html>

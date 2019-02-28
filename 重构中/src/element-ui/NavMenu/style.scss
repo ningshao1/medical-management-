@@ -1,0 +1,21 @@
+@import '~@/styles/var.scss';
+@import "~element-ui/packages/theme-chalk/src/menu-item-group.scss";
+@import "~element-ui/packages/theme-chalk/src/menu-item.scss";
+@import "~element-ui/packages/theme-chalk/src/menu.scss";
+@import "~element-ui/packages/theme-chalk/src/submenu.scss";
+.kld-menu {
+    .el-menu-item {
+        border-left: 2px solid transparent;
+        &.is-active {
+            border-left: 2px solid $--color-primary;
+            background-color: rgba(64, 117, 255, 0.1);
+        }
+        &:hover{
+            color: $--color-primary;
+            background-color: transparent;
+            i{
+                color: inherit;
+            }
+        }
+    }
+}

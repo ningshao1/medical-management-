@@ -1,0 +1,10 @@
+@import "~@/styles/var";
+@import "~element-ui/packages/theme-chalk/src/form";
+
+@include b(form) {
+    @include m(label-top) {
+        .el-form-item__label {
+            padding-bottom: 0;
+        }
+    }
+}

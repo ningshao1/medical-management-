@@ -1,0 +1,1 @@
+export {default} from "./doctor-pr-analysis.vue";

@@ -1,0 +1,9 @@
+@import '~@/styles/var.scss';
+$--input-disabled-color:#606266;
+@import "~element-ui/packages/theme-chalk/src/input";
+@include b(input-group) {
+    @include e((append, prepend)) {
+        padding: 0 ($--input-height - $font-size-base) / 2;
+        background-color: $body-background-color;
+    }
+}

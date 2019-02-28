@@ -1,0 +1,96 @@
+.c-uploadFile-wrap .format {
+  display: inline-block;
+  color: #e7485a;
+  white-space: nowrap;
+  width: 10px;
+  margin-left: 10px;
+}
+.c-uploadFile-wrap .upload-body .file-view {
+  width: 100%;
+  padding: 10px;
+  text-align: left;
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap {
+  width: 100px;
+  height: 85px;
+  margin-right: 5px;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap > img {
+  width: 65px;
+  height: 65px;
+  max-width: 65px;
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap > p {
+  width: 100%;
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap .trash-image {
+  width: 100%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  border-radius: 5px;
+  top: 0;
+  left: 0;
+  font-size: 40px;
+  line-height: 85px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap .trash-image > .show-icon {
+  font-size: 30px;
+}
+.c-uploadFile-wrap .upload-body .file-view .file-view-wrap:hover .trash-image {
+  display: inline-block;
+}
+.c-uploadFile-wrap .upload-body .file-view .add-file {
+  border: 1px dashed #dddee1;
+  width: 75px;
+  height: 75px;
+}
+.c-uploadFile-wrap .upload-body .file-view .add-file:hover {
+  border: 1px dashed #2d8cf0;
+}
+.c-uploadFile-wrap .upload-body .file-view .add-file .icon-add {
+  width: 65px;
+  height: 65px;
+  max-width: 65px;
+  display: inline-block;
+  color: #dddee1;
+  font-size: 70px;
+  line-height: 75px;
+}
+.c-uploadFile-wrap .upload-body .preview {
+  padding: 50px 0;
+  background-color: #fafafa;
+  height: 220px;
+}
+.c-uploadFile-wrap .upload-body .preview > .first > p {
+  font-size: 16px;
+  color: #b1b0b0;
+}
+.c-uploadFile-wrap .upload-body .preview > .second > p {
+  font-size: 14px;
+  color: #666666;
+}
+.c-uploadFile-wrap .upload-body .preview > .second > p .up-btn {
+  border: solid 1px #999999;
+  background-color: #e3e3e3;
+  margin-left: 10px;
+  width: 95px;
+  height: 38px;
+}
+.c-uploadFile-wrap .upload-body .preview > .second > div {
+  margin-top: 10px;
+  font-size: 14px;
+  color: #a9a8a9;
+  display: inline-block;
+  transform: translateX(-92px);
+}
+.c-uploadFile-wrap .upload-body .preview > .second > div > img {
+  vertical-align: middle;
+  width: 22px;
+  height: 22px;
+}

@@ -1,0 +1,173 @@
+.add-device-name {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.add-device-name .check-asset {
+  position: absolute;
+  right: 0;
+  color: #666666;
+  font-size: 12px;
+  top: -30px;
+}
+.add-device-name .ivu-btn {
+  margin-left: 15px;
+}
+.step1-wrap .kld-date-picker {
+  width: 100%;
+}
+.step1-wrap .ivu-form-item {
+  margin-top: 6px;
+  margin-bottom: 26px !important;
+}
+.step1-wrap .input-half {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+.step1-wrap .input-half li {
+  width: 49%;
+}
+.step1-wrap .input-half li p {
+  font-size: 14px;
+  color: #000000;
+  margin: 15px 0 10px;
+}
+.step1-wrap .patient-info {
+  display: flex;
+  justify-content: space-between;
+}
+.step1-wrap .patient-info li {
+  width: 32%;
+}
+.step1-wrap .patient-info li p {
+  font-size: 14px;
+  color: #000000;
+  margin: 15px 0 10px;
+}
+.step1-wrap .attachment {
+  margin-top: 20px;
+  position: relative;
+}
+.step1-wrap .attachment p {
+  font-size: 14px;
+  color: #000000;
+  margin: 15px 0 10px;
+}
+.step1-wrap .attachment p span {
+  color: #a9a8a9;
+}
+.step1-wrap .attachment .text-count {
+  position: absolute;
+  bottom: 6px;
+  right: 17px;
+  font-size: 14px;
+  color: #a9a8a9;
+}
+ /deep/ .one-step-modal .ivu-modal {
+  width: 1000px !important;
+}
+.one-step-modal-content {
+  display: flex;
+  min-height: 800px;
+}
+.one-step-modal-content .one-step-tree {
+  max-width: 250px;
+  min-width: 200px;
+  max-height: 800px;
+  flex: 1;
+  width: 20%;
+  margin-right: 10px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: #fff;
+  padding: 10px;
+  padding-left: 0;
+  padding-top: 0;
+}
+.one-step-modal-content .asset-tree {
+  padding-left: 8px;
+  padding-top: 8px;
+}
+.one-step-modal-content .one-step-table {
+  background: #fafafa;
+  flex: 1;
+  width: 80%;
+  padding: 10px;
+}
+.one-step-modal-content .one-step-table .kld-input {
+  margin-bottom: 10px;
+}
+.one-asset .one-asset-table {
+  border: none;
+  width: 100%;
+}
+.one-asset .one-asset-table > tr {
+  text-align: center;
+  border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+.one-asset .one-asset-table > tr > th {
+  width: 25%;
+  padding: 15px 10px;
+  font-size: 13px;
+  color: #666;
+  font-weight: 600;
+  border: none;
+}
+.one-asset .one-asset-table > tr > td {
+  color: #666;
+  font-size: 13px;
+  padding: 15px 10px;
+  border: none;
+}
+.one-asset .one-asset-table > tr > td:nth-of-type(4) {
+  font-size: 13px;
+  cursor: pointer;
+}
+.one-asset .acceptance-tree-page {
+  text-align: center;
+  padding-top: 12px;
+  background: #fafafa;
+  margin-bottom: 10px;
+}
+.band-div {
+  position: absolute;
+  border: 1px solid #e2e2e2;
+  z-index: 100;
+}
+ /deep/ .section-tree {
+  width: 100%;
+}
+ /deep/ .section-tree .ivu-poptip-rel {
+  width: 100%;
+}
+ /deep/ .section-tree .ivu-poptip-popper {
+  width: 100%;
+}
+ /deep/ .contract-Modal .ivu-modal-body {
+  padding: 0;
+}
+ /deep/ .contract-Modal .one-step-tree {
+  background: #fafafa;
+  margin-right: 0;
+}
+ /deep/ .contract-Modal .typeList > li {
+  font-size: 14px;
+  padding: 18px 12px;
+  background-color: #f5f6fa;
+  border-bottom: 1px solid #dce0e6;
+  cursor: pointer;
+  background: transparent;
+  background: #fafafa;
+}
+ /deep/ .contract-Modal .typeList .click-li {
+  border-left: 3px solid #01b0c7;
+  background: #fafafa;
+}
+ /deep/ .contract-Modal .typeList .click-li p {
+  color: #01b0c7;
+}
+ /deep/ .addContractName .ivu-input:disabled {
+  background: #fff !important;
+}

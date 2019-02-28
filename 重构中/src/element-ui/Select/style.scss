@@ -1,0 +1,6 @@
+@import '@/styles/var.scss';
+@import "~element-ui/packages/theme-chalk/src/select";
+@import "~element-ui/packages/theme-chalk/src/select-dropdown";
+@include b(select) {
+    width: 100%;
+}

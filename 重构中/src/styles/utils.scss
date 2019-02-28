@@ -1,0 +1,251 @@
+@import "./var";
+@import "~element-ui/packages/theme-chalk/src/display";
+.text-success{
+    color: $color-success !important;
+}
+.text-danger{
+    color: $color-error !important;
+}
+
+.text-warning{
+    color: $color-warning !important;
+}
+
+.text-info{
+    color: $color-info !important;
+}
+
+.text-blue{
+    color: $color-primary !important;
+}
+
+.text-orange{
+    color: $color-orange !important;
+}
+
+.text-primary{
+    color: $color-text-primary !important;
+}
+
+.text-regular{
+    color: $color-text-regular !important;
+}
+
+.text-secondary{
+    color: $color-text-secondary !important;
+}
+
+.text-disabled{
+    color: $color-text-disabled !important;
+}
+
+
+
+.relative{
+    position: relative !important;
+}
+
+
+@for $index from 0 through 20 {
+    $value: $index + 0px !important;
+    .m-#{$index} {margin: $value}
+    .mx-#{$index} {margin-left: $value; margin-right: $value}
+    .my-#{$index} {margin-top: $value; margin-bottom: $value}
+    .mt-#{$index} {margin-top: $value}
+    .mr-#{$index} {margin-right: $value}
+    .mb-#{$index} {margin-bottom: $value}
+    .ml-#{$index} {margin-left: $value}
+
+    .p-#{$index} {padding: $value}
+    .px-#{$index} {padding-left: $value; padding-right: $value}
+    .py-#{$index} {padding-top: $value; padding-bottom: $value}
+    .pt-#{$index} {padding-top: $value}
+    .pr-#{$index} {padding-right: $value}
+    .pb-#{$index} {padding-bottom: $value}
+    .pl-#{$index} {padding-left: $value}
+
+
+    @if ($index >= 12) {
+        .fz-#{$index} {font-size: $value}
+        .lh-#{$index} {line-height: $value}
+    }
+}
+
+.b-0{
+    border: 0 !important;
+}
+.bt-0{
+    border-top: 0 !important;;
+}
+.br-0{
+    border-right: 0 !important;;
+}
+.bb-0{
+    border-bottom: 0 !important;;
+}
+.bl-0{
+    border-left: 0 !important;;
+}
+
+
+.full-width{
+    width: 100% !important;
+}
+
+.full-height{
+    height: 100% !important;
+}
+
+
+.none{
+    display: none !important;
+}
+.block{
+    display: block !important;
+}
+.inline-block{
+    display: inline-block !important;
+}
+.flex{
+    display: flex !important;
+}
+.inline-flex{
+    display: inline-flex !important;
+}
+
+.empty-none{
+    &:empty{
+        @extend .none;
+    }
+}
+
+.flex-row{
+    flex-direction: row !important;
+}
+.flex-row-reverse{
+    flex-direction: row-reverse !important;
+}
+.flex-column{
+    flex-direction: column !important;
+}
+.flex-column-reverse{
+    flex-direction: column-reverse !important;
+}
+.justify-content-start{
+    justify-content: flex-start !important;
+}
+.justify-content-end{
+    justify-content: flex-end !important;
+}
+.justify-content-center{
+    justify-content: center !important;
+}
+.justify-content-between{
+    justify-content: space-between !important;
+}
+.justify-content-around{
+    justify-content: space-around !important;
+}
+
+.align-items-start{
+    align-items: flex-start !important;
+}
+.align-items-end{
+    align-items: flex-end !important;
+}
+.align-items-center{
+    align-items: center !important;
+}
+//.align-items-baseline{
+//  align-self: baseline !important;
+//}
+.align-items-stretch{
+    align-items: stretch !important;
+}
+.align-self-start{
+    align-self: flex-start;
+}
+.align-self-end{
+    align-self: flex-end;
+}
+.align-self-center{
+    align-self: center;
+}
+.align-self-stretch{
+    align-self: stretch;
+}
+
+.flex-grow-1{
+    flex-grow: 1 !important;
+}
+.flex-grow-lazy-1{
+    @extend .flex-grow-1;
+    min-width: 0 !important;
+}
+.flex-shrink-0{
+    flex-shrink: 0 !important;
+}
+.flex-basis-0{
+    flex-basis: 0 !important;
+}
+
+@each $align in (left, center, right) {
+    .text-#{$align}{
+        text-align: $align !important;
+    }
+}
+
+
+@each $value in (visible, hidden, auto) {
+    .overflow-#{$value}{
+        overflow: $value !important;
+    }
+}
+
+@each $border-width in 0, 1{
+    @each $border-direction in (top, right, bottom, left){
+        @if ($border-direction) {
+            .border-#{$border-direction}-#{$border-width}{
+                border-#{$border-direction}: #{$border-width}px solid $border-color-base !important;
+            }
+        } @else {
+            .border-#{$border-width}{
+                border-#{$border-direction}: #{$border-width}px solid $border-color-base !important;
+            }
+        }
+    }
+}
+@each $cursor-type in (auto, default, none, context-menu, help, pointer, progress, wait, cell, crosshair, text, vertical-text, alias, copy, move, no-drop, not-allowed, all-scroll, zoom-in, zoom-out, grab, grabbing) {
+    .cursor-#{$cursor-type} {
+        cursor: $cursor-type;
+    }
+}
+	
+
+
+
+
+.text-uppercase{
+    text-transform: uppercase !important;
+}
+.text-no-wrap{
+    white-space: nowrap !important;
+}
+.text-ellipsis{
+    @extend .text-no-wrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+.font-weight-bold{
+    font-weight: bold !important;
+}
+.font-weight-normal{
+    font-weight: normal !important;
+}
+.text-space-between {
+    //文字两端分散对其（在火狐浏览器上若不生效，在div上添加属性 lang="zh" 即可）
+    text-align-last: justify;
+    text-align: justify;
+    text-justify: distribute-all-lines; // 兼容ie浏览器
+}
+

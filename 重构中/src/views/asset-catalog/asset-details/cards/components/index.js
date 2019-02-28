@@ -1,0 +1,1 @@
+export { default as FunctionDescriptionCard } from "./FunctionDescriptionCard.vue";

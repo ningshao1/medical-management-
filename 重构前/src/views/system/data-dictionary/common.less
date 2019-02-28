@@ -1,0 +1,29 @@
+.type-right-wrap{
+    position: relative;
+    .search-input{
+        width:270px;
+        cursor:pointer;
+        position:absolute;
+        top:-70px;
+        right:0;
+    }
+    .type-title{
+        display: flex;
+        justify-content: space-between;
+        border-bottom: solid 1px rgba(2, 31, 57, 0.2);
+        height: 55px;
+        padding:0 20px;
+        align-items: center;
+    }
+    .type-list{
+        height:calc(~'100% - 55px');
+        padding:20px;
+    }
+    
+}
+.type-modal{
+    /deep/.type-modal-content{
+        width:500px;
+        padding-bottom:20px;
+    }
+}

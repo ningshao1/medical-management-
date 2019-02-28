@@ -1,0 +1,57 @@
+.flex-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.OnetplDetails .basicsInfo .ivu-input:disabled {
+  background: #fff!important;
+}
+.OnetplDetails #elementInfo .r_content {
+  background: transparent;
+}
+.OnetplDetails #elementInfo .categoryScroll + a {
+  display: none;
+}
+.OnetplDetails #elementInfo .categoryScroll > ul > li span:nth-of-type(2) {
+  display: none;
+}
+.Maintenance-template-list .kld-box-effect .ivu-row-flex {
+  align-items: center;
+}
+.Maintenance-template-list .kld-box-effect [class^=kld-btn] {
+  width: 72px;
+  height: 38px;
+}
+#addTwoTpl .r_content,
+#addOneTemplate .r_content {
+  background-color: #fafafa;
+}
+.TwotplDetails .basicsInfo .ivu-input:disabled {
+  background: #fff!important;
+}
+.TwotplDetails #elementInfo .r_content {
+  background: transparent;
+}
+.TwotplDetails #elementInfo .categoryScroll + a {
+  display: none;
+}
+.addTwoTask .bisInfo {
+  padding: 0!important;
+}
+.addTwoTask .addSection .ivu-input {
+  height: 45px;
+}
+.addTwoTask .addSection .ivu-input:disabled {
+  background: #fff!important;
+}
+.section-tree .ivu-poptip-body {
+  max-height: 300px;
+  overflow: auto;
+}
+[class*=kld-input] .ivu-input,
+input,
+.ivu-input,
+.ivu-input:disabled {
+  border-color: rgba(2, 31, 57, 0.1);
+}

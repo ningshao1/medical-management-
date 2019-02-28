@@ -1,0 +1,15 @@
+$--radio-checked-icon-color:#fff;
+@import '@/styles/var.scss';
+@import "~element-ui/packages/theme-chalk/src/radio";
+@import "~element-ui/packages/theme-chalk/src/radio-button";
+@import "~element-ui/packages/theme-chalk/src/radio-group";
+.el-radio{
+    .el-radio__inner{
+        &::after{
+            width: 9px;
+            height: 9px;
+            background-color:#4b74e0;
+        }
+
+    }
+}

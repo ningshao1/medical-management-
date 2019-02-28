@@ -1,0 +1,1 @@
+export {default} from '@/views/adjust/common/render-ellipsis';

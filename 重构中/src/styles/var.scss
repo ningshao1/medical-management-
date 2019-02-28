@@ -1,0 +1,165 @@
+/*User Custom*/
+$color-link: #2195ec;
+
+$color-primary: #4b74e0;
+$color-primary-light: rgba(87, 151, 245, 0.2);
+
+
+$color-success: #5cb45b;
+$color-success-light: #e7f4e7;
+
+$color-info: #347da3;
+$color-info-light: #cdecf0;
+
+$color-warning: #f5a212;
+$color-warning-light: #fef4e3;
+
+$color-error: #de1036;
+$color-error-light: #fdeaee;
+
+$color-orange: #f45428;
+
+$border-radius-base: 0px;
+$border-color-base: #E0E0E0;
+
+
+$line-height-base: 1.4;
+$font-size-base: 14px;
+$color-font-second: #000;
+
+
+$color-text-primary: #262626;
+$color-text-regular: #595959;
+$color-text-secondary: #8C8C8C;
+$color-text-disabled: #BFBFBF;
+
+
+
+$dialog-body-padding: 20px 24px; //控制Dialog和MessageBox的content内边距
+$dialog-header-footer-padding: 10px 24px; //控制Dialog和MessageBox的header&footer内边距
+$dialog-header-background-color: #6b8ee9;
+$dialog-footer-background-color: #f1f3f4;
+
+$form-control-height-base: 32px;
+$nav-bar-background-color: #001529;
+$nav-bar-background-active-color: #122043;
+$body-background-color: #F1F3F4;
+
+
+/*Base*/
+$--color-primary: $color-primary;
+$--color-success: $color-success;
+$--color-warning: $color-warning;
+$--color-danger: $color-error;
+//$--color-info: #909399;
+
+$--color-success-light: $color-success-light;
+$--color-warning-light: $color-warning-light;
+$--color-danger-light: $color-error-light;
+//$--color-info-light: $color-info-light;
+
+$--color-success-lighter: $color-success-light;
+$--color-warning-lighter: $color-warning-light;
+$--color-danger-lighter: $color-error-light;
+//$--color-info-lighter: mix($--color-white, $--color-info, 90%) !default;
+
+$--color-text-primary: $color-text-primary;
+$--color-text-regular: $color-text-regular;
+$--color-text-secondary: $color-text-secondary;
+//$--color-text-placeholder: $color-text-disabled;
+
+$--border-color-base: $border-color-base;
+$--border-radius-base: $border-radius-base;
+$--border-radius-small: $border-radius-base;
+
+/*Table*/
+$--table-border-color: $border-color-base;
+$--table-row-hover-background: #fcfcfc;
+$--table-header-background: #EBEBEB;
+$--table-text-color: $color-text-regular;
+$--table-header-color: $color-text-primary;
+//$--table-current-row-background: $--color-primary-light-9 !default;
+//$--table-footer-background: $--color-text-placeholder !default;
+
+
+/*Dialog*/
+$--dialog-box-shadow: 0px 2px 4px 0px rgba(#000, 0.3);
+$--dialog-title-font-size: $font-size-base;
+$--dialog-line-height: $line-height-base; //只修改标题文字的行高
+$--dialog-padding-primary: $dialog-header-footer-padding; //只影响header和footer的padding
+
+
+/*Message*/
+$--message-padding:7px 15px;
+//info
+$--message-background-color:#e6f7ff;
+$--message-info-color:#1890ff;
+//success
+$--message-success-color: $color-success;
+$--color-success-lighter:#f6ffed;
+$--color-success-light: $color-success-light;
+//warning
+$--message-warning-color: $color-warning;
+$--color-warning-lighter:#fffbe6;
+$--color-warning-light: $color-warning-light;
+//error
+$--message-error-color: $color-error;
+$--color-error-lighter:#fff2f1;
+$--color-error-light: $color-error-light;
+/*radio*/
+
+
+/*Font Path*/
+$--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+//select
+$--input-height:32px;
+
+/*Input*/
+//$--input-border: $border-color-base;
+$--input-disabled-fill: $body-background-color;
+
+//btn
+$button-width-mini:72px;
+$button-height-mini:32px;
+$button-width-small:100px;
+$button-height-small:32px;
+$button-width-large:145px;
+$button-height-large:40px;
+$--button-second-color:$color-primary;
+$--button-second-fill:#fff;
+$--button-second-border:rgba(75, 116, 224, 0.65);
+$--button-weaken-color:#fff;
+$--button-weaken-fill:#6c757d;
+$--button-weaken-border:transparent;
+$--button-default-color:rgba(0, 0, 0, 0.65);
+$--button-default-fill:#fff;
+$--button-default-border:rgba(0, 0, 0, 0.18);
+$--button-success-color:#fff;
+$--button-success-fill: $color-success;
+$--button-success-border:transparent;
+$--button-info-color:#fff;
+$--button-info-fill: $color-info;
+$--button-info-border:transparent;
+$--button-warning-color:#fff;
+$--button-warning-fill: $color-warning;
+$--button-warning-border:transparent;
+$--button-danger-color:#fff;
+$--button-danger-fill: $color-error;
+$--button-danger-border:transparent;
+$--button-screen-color:#fff;
+$--button-screen-fill: $color-primary;
+$--button-screen-border:transparent;
+
+/*Pagination*/
+$--pagination-font-size: $font-size-base;
+$--pagination-border-radius: $border-radius-base;
+$--pagination-fill: transparent;
+$--pagination-button-disabled-fill: transparent;
+
+/*medal size*/
+$--sm: 1200px;
+$--md: 1400px;
+$--lg: 1600px;
+$--xl: 1920px;
+

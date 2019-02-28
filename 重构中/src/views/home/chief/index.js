@@ -1,0 +1,1 @@
+export { default } from './chief-home.vue'

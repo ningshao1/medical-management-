@@ -1,0 +1,51 @@
+{
+  "name": "calidray-admin-reconsitution",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "webstorm-webpack-alias": "webpack --config ./webpack.alias.js",
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "inspect": "vue-cli-service inspect --mode production",
+    "前端开发环境": "",
+    "dev": "npm run serve -- --mode dev",
+    "提供后端调试自由更换IP": "",
+    "back-end": "npm run serve -- --mode back-end",
+    "内网测试服打包": "",
+    "alpha": "npm run build -- --mode alpha",
+    "外网测试服打包": "",
+    "beta": "npm run build -- --mode beta",
+    "正式服打包": "",
+    "release": "npm run build -- --mode release"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "dayjs": "1.8.5",
+    "echarts": "^4.2.0-rc.2",
+    "element-ui": "^2.4.5",
+    "jquery": "^3.3.1",
+    "perfect-scrollbar": "1.4.0",
+    "pinyin-match": "^1.0.7",
+    "portal-vue": "1.5.1",
+    "qs": "^6.6.0",
+    "tui-calendar": "1.2.3",
+    "v-charts": "^1.19.0",
+    "vue": "2.5.22",
+    "vue-router": "^3.0.1",
+    "vuex": "3.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-service": "3.3.1",
+    "babel-plugin-component": "^1.1.1",
+    "cross-env": "^5.2.0",
+    "less": "^3.0.4",
+    "less-loader": "^4.1.0",
+    "node-sass": "4.11.0",
+    "sass-loader": "7.1.0",
+    "vue-cli-plugin-element": "1.0.1",
+    "vue-template-compiler": "^2.5.22",
+    "webpack-css-treeshaking-plugin": "^1.1.27",
+    "webpack-deep-scope-plugin": "^1.6.0"
+  }
+}
